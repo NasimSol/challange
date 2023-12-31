@@ -1,0 +1,23 @@
+@mixin font($size: 16px, $weight: 400) {
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin flex($direction: row, $align: center, $justify: center) {
+  display: flex;
+  direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin grid($grid-template-columns: 1fr 4fr, $gap: none) {
+  display: grid;
+  grid-template-columns: $grid-template-columns;
+  gap: $gap;
+}
+
+@mixin border($color: black, $style: solid, $width: 1px) {
+  border-color: $color;
+  border-style: $style;
+  border-width: $width;
+}
