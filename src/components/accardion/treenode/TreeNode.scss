@@ -1,0 +1,35 @@
+@import "../../../theme/mixins";
+
+.tree-node {
+  .node-header {
+    padding: 10px 0 10px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s;
+    @include font(.65rem, 400);
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+
+    .node-leader {
+      &.bold {
+        @include font(.6rem, 600);
+      }
+
+      &.normal {
+        @include font(.55rem, 500);
+      }
+
+    }
+
+    svg {
+      margin-right: 5px;
+    }
+  }
+
+  .node-children {
+    padding-left: 20px;
+  }
+}
