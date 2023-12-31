@@ -1,0 +1,105 @@
+@import "../../theme/mixins";
+
+.filter-container {
+  position: sticky;
+  width: 80%;
+  height: fit-content;
+  padding-top: 1px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem 0.7rem 0 0;
+  top: 5px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  margin-right: 20%;
+  @include flex(column, start, center);
+  @include border(var(--border-color), solid, 1px);
+
+  .filter-title {
+    display: inline-block;
+    @include font(0.8rem, 600);
+  }
+
+  .filter-category {
+    @include font(0.7rem, 600);
+    color: var(--price-color);
+  }
+
+
+  .nav-btn {
+    padding: 1px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--textColor);
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.4rem;
+  }
+}
+
+.card-container {
+  width: 100%;
+  @include flex(column, center, center);
+}
+
+.filter-container-mobile {
+  display: none;
+}
+
+
+@media (max-width: 1200px) {
+
+
+  .filter-container {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 1px;
+    background-color: var(--background-part);
+    border: none;
+    padding-right: 2px;
+    margin-right: 0;
+    display: block;
+    left: 0;
+
+    .nav-btn {
+      visibility: visible;
+      opacity: 1;
+
+    }
+
+    .nav-close-btn {
+      position: absolute;
+      top: 0;
+      left: 1rem;
+    }
+  }
+
+  .responsive_nav {
+    transform: translateY(100vh);
+  }
+
+  .filter-container-mobile {
+
+    @include flex(row, center, start);
+    margin-right: 5%;
+
+    .filter-button-mobile {
+      @include border(black, solid, 1px);
+      width: 100px;
+      height: 40px;
+      border-radius: 8px;
+      @include font(0.8rem, 400);
+      background-color: var(--background-part);
+    }
+  }
+}
+
+
