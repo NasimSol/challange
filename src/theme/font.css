@@ -1,0 +1,6 @@
+
+@font-face {
+    font-family: 'IranianSanseRegular';
+    font-style: normal;
+    src: local('IranianSanseRegular'), url(../assets/fonts/IranianSansRegular.ttf) format("truetype");
+}
