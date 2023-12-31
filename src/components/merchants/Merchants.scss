@@ -1,0 +1,75 @@
+@import "../../theme/mixins";
+
+.merchants__container {
+  width: 90%;
+
+  .title {
+    @include font(0.7rem, 500);
+  }
+
+  .checkList__container {
+    max-height: 250px;
+    max-width: 400px;
+
+    .list-container {
+      max-height: 200px;
+      overflow: auto;
+      @include grid(1fr, 20px);
+      margin-top: 0.5rem;
+
+
+      .merchant__container {
+        width: 90%;
+        @include flex(row, center, start);
+
+        .checkbox {
+          margin: 0.1rem 0 0 0.5rem;
+          line-height: normal;
+          width: 20px;
+          height: 20px;
+          appearance: none; /* Hide default checkbox */
+          outline: none; /* Remove default focus outline */
+          cursor: pointer;
+        }
+
+        .checkbox::before {
+          content: "";
+          display: inline-block;
+          width: 16px; /* Adjust size as needed */
+          height: 16px; /* Adjust size as needed */
+          @include border(var(--product-color), solid, 1px);
+          background-color: var(--background-part); /* Background color */
+          border-radius: 5px; /* Adjust the value as needed */
+          margin-right: 4px; /* Spacing between the custom checkbox and text */
+          vertical-align: middle;
+        }
+
+        /* Style for checked state */
+        .checkbox:checked::before {
+          background-color: var(--product-color); /* Change color for checked state */
+          border-color: var(--product-color); /* Change border color for checked state */
+        }
+
+        .merchant-name {
+          margin: 0.2rem 0 0 0.5rem;
+          @include font(0.55rem, 400);
+        }
+      }
+    }
+  }
+
+  .checkList__container::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .checkList__container::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+}
+
+
+
+
+
+
+
