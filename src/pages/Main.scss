@@ -1,0 +1,17 @@
+@import "../theme/mixins";
+
+.container {
+  position: relative;
+  @include grid(1fr 4fr, 12px);
+}
+
+@media (max-width: 1200px) {
+  .container {
+    @include grid(1fr);
+  }
+  .card-container {
+    @include flex(row, center, center);
+    margin-left: 10%;
+  }
+}
+
